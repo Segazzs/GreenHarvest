@@ -1,5 +1,5 @@
 body {
-  background-color: #576f35;
+  background: #576f35;
   font-family: "Inter Tight", sans-serif;
 }
 
@@ -227,17 +227,112 @@ a {
 /* WORK */
 
 .work {
-  display: flex;
-}
-.work-img {
-  padding: 100px;
-  width: 50%;
-  background: #7a3145;
+  position: relative;
+  overflow: hidden;
 }
 
-.work-img img {
+.container {
 }
+
+.work-img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.work-img::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #7a3145;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.work-content {
+  padding: 40px 0;
+}
+
+.work-title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fbfbfb;
+  margin-bottom: 20px;
+}
+
+.work-accent {
+  color: #d4bfc4;
+}
+
+.work-desc {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #fbfbfb;
+  margin-bottom: 40px;
+}
+
 .work-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.work-item {
+  background-color: #fbfbfb;
+  border-radius: 15px;
+  padding: 12px 27px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #858585;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.work-list-num {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #d4bfc4;
+  flex-shrink: 0;
+  border-radius: 100%;
+}
+
+.work-num {
+  display: block;
+  width: 42px;
+  height: 42px;
+  background-color: #7a3145;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.11111;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fbfbfb;
+}
+
+.work-list-accent {
+  font-weight: 700;
+  color: #141414;
+  display: inline-block;
 }
 
 /* ADVERTISEMENT */
