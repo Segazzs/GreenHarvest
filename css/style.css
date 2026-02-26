@@ -72,13 +72,17 @@ a {
   gap: 4px;
 }
 
+.header-logo svg {
+  fill: #fff;
+}
+
 .header-logo-icon {
   width: 16px;
   height: 16px;
 }
 
 .header-logo-text {
-  width: 148px;
+  width: 146px;
   height: 12px;
 }
 
